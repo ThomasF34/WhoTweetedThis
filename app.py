@@ -97,7 +97,7 @@ os.system(r"""cat supervised_valid.txt | sed -e "s/\([.\!?,'/()]\)/ \1 /g" | tr 
 
 # Train the algorithm
 
-classifier = fasttext.train_supervised("supervide_data_preprocessed.txt", lr=0.3, wordNgrams=2)
+classifier = fasttext.train_supervised("supervised_data_preprocessed.txt", lr=0.3, wordNgrams=2)
 
 print_results(*classifier.test('supervised_valid_preprocessed.txt'))
 
